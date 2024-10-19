@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "ZhaokunYAN.png"
+  avatar           : "profile.png"
   name             : "Zhaokun Yan"
   pronouns         : # example: "she/her"  
   bio              : "I focus on the intersection of artificial intelligence, AIGC and medicine"
