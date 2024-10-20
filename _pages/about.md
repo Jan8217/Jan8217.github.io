@@ -15,4 +15,7 @@ You can find my CV here: [Zhaokun's Curriculum Vitae](../assets/Curriculum_Vitae
 
 [Github](https://github.com/Jan8217) / [Wechat](.../images/wechat.png).
 
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=sn3RQ9kchjq17GGh2pNmd4OXhtD-eN2SO3aFdtk10BI"></script>
+
+<div style="width: 300px; height: 300px;">
+  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=sn3RQ9kchjq17GGh2pNmd4OXhtD-eN2SO3aFdtk10BI"></script>
+</div>
