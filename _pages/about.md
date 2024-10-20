@@ -1,13 +1,11 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Zhaokun Yan"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-
-# Zhaokun Yan 
 
 Zhaokun Yan (闫昭坤) graduated from the Technical University of Munich with a degree in *Medical Engineering and Assistance Systems*. During his master's studies, Zhaokun has completed three internships in **Knorr-Bremse AG**, **Huawei WMTC** and **Frontis**. His current research direction is video generation and diffusion modeling. 
 
