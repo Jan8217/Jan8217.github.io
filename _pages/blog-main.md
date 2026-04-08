@@ -2,7 +2,7 @@
 layout: single
 title: "Zhaokun's Blog"
 permalink: /blogs/
-author_profile: true
+author_profile: false
 header:
   overlay_image: /assets/images/blog-header.jpg # 模仿张逸骅的大图背景
   overlay_filter: 0.5
