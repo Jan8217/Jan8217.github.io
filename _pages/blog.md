@@ -5,7 +5,7 @@ permalink: /blogs/
 author_profile: false
 classes: wide
 header:
-  overlay_image: "assets/images/Italy.jpg"  # 尝试不带开头的斜杠，并加上双引号
+  overlay_image: "images/Italy.jpg"  
   overlay_filter: 0.5
 ---
 
