@@ -7,7 +7,7 @@ classes: wide  # 关键点：这一行会强制内容撑满全屏，彻底干掉
 header:
   overlay_image: /assets/images/Italy.jpg
   overlay_filter: 0.5
-  caption: "Investigate and Innovate" # 可以在图片右下角加一行低调的小字
+  caption: "Dream Place" # 可以在图片右下角加一行低调的小字
 ---
 
 ## 欢迎来到我的个人博客
