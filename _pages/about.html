@@ -15,13 +15,12 @@ redirect_from:
   <meta name="theme-color" content="#f8fbf8">
   <link rel="canonical" href="https://jan8217.github.io/">
   <link rel="stylesheet" href="/assets/home/home.css">
-  <link rel="stylesheet" href="/assets/home/light.css">
-  <script src="/assets/home/entrance.js" defer></script>
+  <link rel="stylesheet" href="/assets/home/light.css?v=2">
+  <script src="/assets/home/entrance.js?v=2" defer></script>
 </head>
 <body>
   <dialog class="entrance" aria-label="Site entrance">
-    <canvas aria-hidden="true"></canvas>
-    <div class="entrance-reveal" aria-hidden="true"></div>
+    <video class="entrance-video" data-src="/assets/home/tunnel.mp4" muted playsinline preload="none" aria-hidden="true"></video>
     <button type="button" class="entrance-skip" autofocus>Skip intro</button>
   </dialog>
   <a class="skip" href="#main">Skip to content</a>
@@ -46,7 +45,12 @@ redirect_from:
             <a href="https://huggingface.co/ZhaokunYan">Hugging Face</a>
           </div>
         </div>
-        <div class="hero-art" aria-hidden="true"><span></span></div>
+        <div class="hero-art" aria-hidden="true">
+          <i class="orbit orbit-a"></i>
+          <i class="orbit orbit-b"></i>
+          <i class="orbit orbit-c"></i>
+          <i class="orbit-core"></i>
+        </div>
       </div>
     </section>
 

@@ -17,12 +17,48 @@
 .hero-summary { color: var(--muted); }
 .hero h1[tabindex="-1"]:focus { outline: none; }
 .hero-content { grid-template-columns: minmax(0, 1.12fr) minmax(13rem, .88fr); gap: clamp(2rem, 6vw, 4.5rem); }
-.hero-art { background: radial-gradient(ellipse, #7ab7ab60, transparent 65%); }
-.hero-art::before, .hero-art::after, .hero-art span {
-  border-color: #398c7b8c;
-  box-shadow: 0 0 22px #62b4a22e, inset 0 0 32px #62b4a21c;
+.hero-art { background: radial-gradient(ellipse, #7ab7ab60, transparent 64%); }
+.hero-art::before, .hero-art::after { content: none; }
+.orbit, .orbit-core { grid-area: 1 / 1; }
+.orbit {
+  position: relative;
+  width: 76%;
+  aspect-ratio: 1;
+  border: 1px solid #387d71a6;
+  border-radius: 50%;
+  box-shadow: 0 0 18px #4ca59130;
+  transform: rotate(var(--angle)) rotateX(var(--tilt));
+  animation: orbit-turn var(--turn, 15s) ease-in-out infinite alternate;
 }
-.hero-art span { background: radial-gradient(circle, #fff 0 2%, #369b89 2% 4%, transparent 16%); }
+.orbit::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: .78rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f7fffa;
+  box-shadow: 0 0 0 .18rem #358e7f, 0 0 1.1rem .35rem #57b5a2;
+  offset-path: circle(50% at 50% 50%);
+  offset-anchor: center;
+  animation: orbit-light var(--lap, 6s) linear infinite;
+}
+.orbit-a { --angle: 35deg; --tilt: 58deg; --sway: 48deg; }
+.orbit-b { --angle: -38deg; --tilt: 65deg; --sway: -51deg; --lap: 8s; --turn: 19s; }
+.orbit-b::after { animation-delay: -3s; }
+.orbit-c { --angle: 82deg; --tilt: 63deg; --sway: 98deg; --lap: 5s; --turn: 12s; width: 59%; border-style: dashed; }
+.orbit-c::after { animation-delay: -2s; }
+.orbit-core {
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0 5%, #329180 6% 12%, #59ad9a75 25%, transparent 65%);
+  animation: orbit-pulse 4s ease-in-out infinite alternate;
+}
+@keyframes orbit-turn { to { transform: rotate(var(--sway)) rotateX(calc(var(--tilt) - 13deg)); } }
+@keyframes orbit-light { to { offset-distance: 100%; } }
+@keyframes orbit-pulse { to { opacity: .65; transform: scale(.83); } }
 .profile-links a { color: var(--accent); background: #ffffffad; border-color: #a9c8be; }
 .profile-links .primary { color: #fff; background: var(--accent); }
 .profile-links .primary:hover { color: #fff; background: #084f43; }
@@ -45,11 +81,7 @@ html:has(.entrance[open]) { overflow: hidden; }
   color-scheme: dark;
 }
 .entrance::backdrop { background: transparent; }
-.entrance canvas, .entrance-reveal { position: absolute; inset: 0; width: 100%; height: 100%; }
-.entrance-reveal {
-  clip-path: circle(0% at 50% 50%);
-  background: center 56% / cover url("./photos/12.webp") #dceadc;
-}
+.entrance .entrance-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .entrance button {
   position: absolute;
   z-index: 1;
@@ -65,4 +97,9 @@ html:has(.entrance[open]) { overflow: hidden; }
 
 @media (max-width: 580px) {
   .hero-content { grid-template-columns: 1fr; }
+  .hero-art { display: grid; width: min(11rem, 48vw); justify-self: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit, .orbit::after, .orbit-core { animation: none; }
 }
