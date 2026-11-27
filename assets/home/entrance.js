@@ -12,7 +12,6 @@ function seenEntrance() {
 
 async function playEntrance() {
   const video = entrance.querySelector("video");
-  const skip = entrance.querySelector(".entrance-skip");
   let timeout;
   let fade;
   let finished = false;
@@ -37,7 +36,6 @@ async function playEntrance() {
     }
   }
 
-  skip.addEventListener("click", finish);
   entrance.addEventListener("cancel", (event) => { event.preventDefault(); finish(); });
   motion.addEventListener("change", (event) => { if (event.matches) finish(); });
   video.addEventListener("error", finish);

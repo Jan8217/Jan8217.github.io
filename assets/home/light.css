@@ -82,18 +82,6 @@ html:has(.entrance[open]) { overflow: hidden; }
 }
 .entrance::backdrop { background: transparent; }
 .entrance .entrance-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.entrance button {
-  position: absolute;
-  z-index: 1;
-  right: max(1rem, env(safe-area-inset-right));
-  bottom: max(1rem, env(safe-area-inset-bottom));
-  border: 1px solid #c7e6e8;
-  border-radius: .45rem;
-  background: #051520e8;
-  color: #f5ffff;
-  padding: .6rem .95rem;
-}
-.entrance button:focus-visible { outline-color: #aff4e5; }
 
 @media (max-width: 580px) {
   .hero-content { grid-template-columns: 1fr; }
