@@ -31,6 +31,7 @@ h3 { font-size: 1.15rem; }
 .navigation a:hover { color: var(--accent); }
 .brand { color: var(--ink); font-weight: 700; white-space: nowrap; }
 .brand span { padding-left: .3em; color: var(--muted); font-weight: 500; }
+.nav-links a[aria-current="page"] { color: var(--accent); }
 .nav-links a { color: var(--muted); font-size: .9rem; white-space: nowrap; }
 
 .hero { position: relative; isolation: isolate; overflow: hidden; border-bottom: 1px solid var(--line); }
@@ -49,6 +50,7 @@ h3 { font-size: 1.15rem; }
 .eyebrow, .venue, .news-list time { color: var(--accent); font-family: ui-monospace, Consolas, monospace; font-size: .88rem; }
 .eyebrow { margin-bottom: 1rem; padding-left: .85rem; border-left: 2px solid var(--accent); }
 h1 { font-size: clamp(3.15rem, 7.2vw, 6rem); letter-spacing: -.065em; }
+.page-title { margin-bottom: 1.65rem; font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -.05em; }
 .hero-summary { max-width: 34rem; margin-block: 1.35rem 1.7rem; color: #c4d7e5; font-size: clamp(1.02rem, 2vw, 1.18rem); }
 .profile-links { display: flex; flex-wrap: wrap; gap: .65rem; }
 .profile-links a { padding: .53rem .95rem; border: 1px solid #548092; border-radius: .4rem; color: var(--ink); background: #102637; font-size: .93rem; font-weight: 600; text-decoration: none; }

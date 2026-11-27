@@ -7,10 +7,61 @@ permalink: /photos/
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=/#photos">
+  <meta name="theme-color" content="#07111c">
   <title>Life in photos · Zhaokun Yan</title>
+  <link rel="canonical" href="https://jan8217.github.io/photos/">
+  <link rel="stylesheet" href="/assets/home/home.css">
+  <script src="/assets/home/home.js" defer></script>
 </head>
 <body>
-  <p><a href="/#photos">View the photo gallery</a></p>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="wrap navigation" aria-label="Main navigation">
+      <a class="brand" href="/">Zhaokun Yan <span lang="zh-Hans">闫昭坤</span></a>
+      <div class="nav-links">
+        <a href="/#about">About</a><a href="/#news">News</a><a href="/#publications">Publications</a>
+        <a href="/#projects">Projects</a><a href="/photos/" aria-current="page">Photos</a><a href="/#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap" id="main">
+    <section class="section" aria-labelledby="photos-title">
+      <h1 class="page-title" id="photos-title">Life in photos</h1>
+        <div class="gallery">
+          <a href="/assets/home/photos/01.webp"><img src="/assets/home/photos/01-thumb.webp" alt="House under an autumn sky" width="640" height="480" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/02.webp"><img src="/assets/home/photos/02-thumb.webp" alt="White cat resting on a bed" width="640" height="640" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/03.webp"><img src="/assets/home/photos/03-thumb.webp" alt="Shelves in a vintage pharmacy" width="480" height="640" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/04.webp"><img src="/assets/home/photos/04-thumb.webp" alt="A corner building with green trim" width="480" height="640" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/05.webp"><img src="/assets/home/photos/05-thumb.webp" alt="Cologne Cathedral" width="480" height="640" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/06.webp"><img src="/assets/home/photos/06-thumb.webp" alt="Inside the ICML auditorium" width="640" height="480" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/07.webp"><img src="/assets/home/photos/07-thumb.webp" alt="Moonlit canal and city lights" width="640" height="480" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/08.webp"><img src="/assets/home/photos/08-thumb.webp" alt="Climbing walls at dusk" width="640" height="480" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/09.webp"><img src="/assets/home/photos/09-thumb.webp" alt="BMW Welt at night" width="640" height="480" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/10.webp"><img src="/assets/home/photos/10-thumb.webp" alt="Hong Kong towers after dark" width="480" height="640" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/11.webp"><img src="/assets/home/photos/11-thumb.webp" alt="Floral lampshade in a vintage shop" width="480" height="640" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/12.webp"><img src="/assets/home/photos/12-thumb.webp" alt="Fountains under a cloudy sky" width="640" height="480" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/13.webp"><img src="/assets/home/photos/13-thumb.webp" alt="Red lanterns at The Peninsula" width="480" height="640" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/14.webp"><img src="/assets/home/photos/14-thumb.webp" alt="ICML 2026 at Coex" width="640" height="480" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/15.webp"><img src="/assets/home/photos/15-thumb.webp" alt="Sunset over an outdoor climbing park" width="640" height="480" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/16.webp"><img src="/assets/home/photos/16-thumb.webp" alt="BMW Museum lit in blue" width="640" height="480" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/17.webp"><img src="/assets/home/photos/17-thumb.webp" alt="Brick tower seen from below at night" width="480" height="640" loading="lazy" decoding="async"></a>
+          <a href="/assets/home/photos/18.webp"><img src="/assets/home/photos/18-thumb.webp" alt="A playground by the sea" width="640" height="480" loading="lazy" decoding="async"></a>
+        </div>
+    </section>
+  </main>
+  <footer class="wrap footer">
+    <span>Zhaokun Yan · 闫昭坤</span>
+    <div><a href="/assets/Curriculum_Vitae.pdf?v=d40fcbfc23fb">CV</a><a href="/blogs/">Blog</a></div>
+  </footer>
+
+  <dialog id="photo-viewer" aria-label="Photo viewer">
+    <button class="viewer-close" type="button" aria-label="Close photo">×</button>
+    <figure><img alt=""><figcaption aria-live="polite"></figcaption></figure>
+    <div class="viewer-controls">
+      <button type="button" data-step="-1">Previous</button>
+      <span class="photo-count"></span>
+      <button type="button" data-step="1">Next</button>
+    </div>
+  </dialog>
 </body>
 </html>
