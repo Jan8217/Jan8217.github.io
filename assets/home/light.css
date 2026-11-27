@@ -1,0 +1,68 @@
+:root {
+  color-scheme: light;
+  --background: #f8fbf8;
+  --panel: #ffffff;
+  --ink: #142b29;
+  --muted: #435f5a;
+  --accent: #086656;
+  --line: #d5e4dd;
+}
+
+.site-header { background: #f8fbf8f5; }
+.hero { background: linear-gradient(115deg, #f8fbf8 12%, #e8f4ef 100%); }
+.hero::before { background: radial-gradient(ellipse at 76% 46%, #bdded180, transparent 62%); animation: none; }
+.hero::after {
+  background-image: linear-gradient(#367b6814 1px, transparent 1px), linear-gradient(90deg, #367b6814 1px, transparent 1px);
+}
+.hero-summary { color: var(--muted); }
+.hero h1[tabindex="-1"]:focus { outline: none; }
+.hero-content { grid-template-columns: minmax(0, 1.12fr) minmax(13rem, .88fr); gap: clamp(2rem, 6vw, 4.5rem); }
+.hero-art { background: radial-gradient(ellipse, #7ab7ab60, transparent 65%); }
+.hero-art::before, .hero-art::after, .hero-art span {
+  border-color: #398c7b8c;
+  box-shadow: 0 0 22px #62b4a22e, inset 0 0 32px #62b4a21c;
+}
+.hero-art span { background: radial-gradient(circle, #fff 0 2%, #369b89 2% 4%, transparent 16%); }
+.profile-links a { color: var(--accent); background: #ffffffad; border-color: #a9c8be; }
+.profile-links .primary { color: #fff; background: var(--accent); }
+.profile-links .primary:hover { color: #fff; background: #084f43; }
+.contact { background: #e9f4ee; }
+
+html:has(.entrance[open]) { overflow: hidden; }
+.entrance {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #04101a;
+  color-scheme: dark;
+}
+.entrance::backdrop { background: transparent; }
+.entrance canvas, .entrance-reveal { position: absolute; inset: 0; width: 100%; height: 100%; }
+.entrance-reveal {
+  clip-path: circle(0% at 50% 50%);
+  background: center 56% / cover url("./photos/12.webp") #dceadc;
+}
+.entrance button {
+  position: absolute;
+  z-index: 1;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  border: 1px solid #c7e6e8;
+  border-radius: .45rem;
+  background: #051520e8;
+  color: #f5ffff;
+  padding: .6rem .95rem;
+}
+.entrance button:focus-visible { outline-color: #aff4e5; }
+
+@media (max-width: 580px) {
+  .hero-content { grid-template-columns: 1fr; }
+}
